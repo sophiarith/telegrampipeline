@@ -1,7 +1,7 @@
 pipeline {
     agent { label 'master'}
     environment{
-        TODAY = "Monday" # Local variable
+        TODAY = "Monday" 
     }
     parameters {
         string(name: "NAME_STRING", defaultValue: "dara", trim: true, description: "Enter your name")
@@ -12,7 +12,7 @@ pipeline {
             steps {
                 echo 'Hello World'
                 echo "TODAY is ${TODAY}"
-                echo "Build Number: ${env.BUILD_NUMBER}" # Built-in variable
+                echo "Build Number: ${env.BUILD_NUMBER}"
 
             }
             
